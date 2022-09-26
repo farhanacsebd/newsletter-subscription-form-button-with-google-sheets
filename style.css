@@ -9,7 +9,7 @@
 
 .hero{
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/cover.jpg);
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@
 }
 
 .email-box i{
-    background-color: #2f3542 ;
+    background-color: #FE0909 ;
     width: 40px;
     line-height: 40px;
     text-align: center;
@@ -61,15 +61,16 @@
 }
 
 .btn{
-    background-color: #2f3542;
+    background-color:#FE0909;
     color: white;
+    font-weight: 700;
     padding: 0 10px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 span{
-    color: #61b752;
+    color: #ffff69;
     margin-top: 10px;
     display: block;
 }
