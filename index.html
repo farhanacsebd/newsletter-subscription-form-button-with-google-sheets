@@ -15,12 +15,25 @@
         <h3>WelCome To</h3>
         <h1>Our Subscription Form</h1>
         <p>Subscribe for more details.</p>
-        <div class="email-box">
+        <form name="submit-to-google-sheet" class="email-box">
             <i class="fas fa-envelope"></i>
-            <input type="email" value="" placeholder="Enter Your Email">
-            <button>Subscribe</button>
-        </div>
+            <input class="tbox" type="email" name="Email" placeholder="Your email id">
+            <button class="btn">Subscribe</button>
+        </form>
+        <span>Thank You For Subscribing! </span>
     </div>
     <script src="main/app.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbywZd2Dl8eLb8K9QDvuQX9-4cLMjVPP8DVnm1zfSUz7fZw1c6X9DOkLA8FZ_b-RDkYi6Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
